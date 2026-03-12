@@ -19,6 +19,13 @@ jobs:
         with:
           flutter-version: '3.13.0'
 
+      - name: Check Flutter & Dart version
+        run: |
+          flutter --version
+
+      - name: Flutter clean
+        run: flutter clean
+
       - name: Flutter Pub Get
         run: flutter pub get
 
