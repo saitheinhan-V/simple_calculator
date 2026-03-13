@@ -48,7 +48,7 @@ jobs:
       - name: Distribute APK to Firebase
         run: |
           firebase appdistribution:distribute build/app/outputs/flutter-apk/app-release.apk \
-          --app "${{ secrets.ANDROID_FIREBASE_APP_ID }}" \
+          --app "${{ secrets.FIREBASE_ANDROID_APP_ID }}" \
           --groups "qa-team" \
           --release-notes "CI build from GitHub"
           --token "$(cat service_account.json)"
